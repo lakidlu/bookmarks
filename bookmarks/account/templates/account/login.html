@@ -7,7 +7,7 @@
     <p>Wypełnij poniższy formularz aby się zalogować</p>
     <form action="." method="post">
         {{ form.as_p }}
-        {% crsf_token %}
+        {% csrf_token %}
         <p><input type="submit" value="Zaloguj"></p>
     </form>
 {% endblock %}
