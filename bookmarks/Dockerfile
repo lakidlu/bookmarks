@@ -7,7 +7,8 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # install dependencies
-RUN pip install --upgrade pip
+RUN pip install --upgrade pip setuptools wheel
+RUN apk add zlib-dev jpeg-dev gcc musl-dev
 COPY ./requirements.txt /usr/src/bookmarks/requirements.txt
 RUN pip install -r requirements.txt
 

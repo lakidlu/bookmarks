@@ -11,7 +11,7 @@
         {% if request.user.is_authenticated %}
         <ul class="menu">
             <li {% if section == "dashboard" %}class="selected"{% endif %}>
-                <a hred="{% url "dashboard" %}">Panel główny</a>
+                <a href="{% url "dashboard" %}">Panel główny</a>
             </li>
             <li {% if section == "images" %}class="selected"{% endif %}>
                 <a href="#">Obrazy</a>
